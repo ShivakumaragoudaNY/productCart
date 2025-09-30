@@ -17,12 +17,14 @@ const ProfileScreen = () => {
     <SafeAreaView style={styles.safe}>
       <View style={styles.container}>
         <View style={styles.card}>
-          <Text style={styles.title}>Hi</Text>
+          <Text style={styles.title}>Hi,</Text>
           <Text style={styles.subtitle}>
             Happy to see you in productCartApp
           </Text>
           <View style={styles.signedInBox}>
-            <Image source={{uri: user?.user?.photo}} style={styles.avatar} />
+            {user?.user?.photo && (
+              <Image source={{uri: user?.user?.photo}} style={styles.avatar} />
+            )}
             <Text style={styles.name}>{user?.user?.name}</Text>
             <Text style={styles.email}>{user?.user?.email}</Text>
 
@@ -65,18 +67,18 @@ const styles = StyleSheet.create({
     shadowRadius: 20,
     elevation: 6,
   },
-  title: {fontSize: 26, fontWeight: '700', marginTop: 4},
+  title: {fontSize: 26, fontWeight: '700', marginTop: 4, color: 'black'},
   subtitle: {fontSize: 14, color: '#666', marginBottom: 24},
   signedInBox: {alignItems: 'center'},
   avatar: {width: 72, height: 72, borderRadius: 36, marginBottom: 12},
-  name: {fontSize: 18, fontWeight: '700'},
+  name: {fontSize: 18, fontWeight: '700', color: 'black'},
   email: {fontSize: 13, color: '#666', marginBottom: 10},
   signOutBtn: {
     marginTop: 12,
-    backgroundColor: '#111827',
+    backgroundColor: '#666',
     paddingVertical: 10,
     paddingHorizontal: 18,
     borderRadius: 10,
   },
-  signOutText: {color: 'white', fontWeight: '700'},
+  signOutText: {color: 'white', fontWeight: '700', color: 'black'},
 });

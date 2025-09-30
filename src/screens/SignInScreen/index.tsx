@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     elevation: 6,
   },
   logo: {width: 72, height: 72, marginBottom: 12, borderRadius: 16},
-  title: {fontSize: 26, fontWeight: '700', marginTop: 4},
+  title: {fontSize: 26, fontWeight: '700', marginTop: 4, color: 'black'},
   subtitle: {fontSize: 14, color: '#666', marginBottom: 24},
   googleBtn: {
     flexDirection: 'row',
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   googleIcon: {width: 20, height: 20, marginRight: 10},
-  googleText: {fontSize: 16, fontWeight: '600'},
+  googleText: {fontSize: 16, fontWeight: '600', color: 'black'},
   signedInBox: {alignItems: 'center'},
   avatar: {width: 72, height: 72, borderRadius: 36, marginBottom: 12},
   name: {fontSize: 18, fontWeight: '700'},
